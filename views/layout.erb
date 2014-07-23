@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      My Awesome App
+    </title>
+  </head>
+  <body>
+    <%=flash[:notice] if flash[:notice] %>
+    <%=yield %>
+  </body>
+</html>

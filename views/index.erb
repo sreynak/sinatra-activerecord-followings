@@ -1,0 +1,29 @@
+Welcome to the app! You are now signed in as
+<%=current_user.name %>
+
+<br>
+<br>
+
+<b>
+  Here are the users you're following:
+</b>
+<br>
+<% current_user.followed.each do |user| %>
+  <%=user.name %>
+  <br>
+  <%=user.email %>
+  <br>
+  <br>
+<% end %>
+
+<b>
+  And a list of users who are following you:
+</b>
+<br>
+<% current_user.followers.each do |user| %>
+  <%=user.name %>
+  <br>
+  <%=user.email %>
+  <br>
+  <br>
+<% end %>
